@@ -12,5 +12,6 @@ namespace Amazon.Example
         public string LastName { get; set; }
 
         public string City { get; set; }
+        public int ID { get; set; }
     }
 }
