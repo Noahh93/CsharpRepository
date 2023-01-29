@@ -9,5 +9,8 @@ namespace Amazon.Example.Inheritance
     internal class Monkey
     {
         public Monkey() { }
+
+        public int ID { get; set; }
     }
+    
 }
