@@ -5,8 +5,7 @@ using Amazon.examples.Inheritance;
 using System.Data.Common;
 using System.Runtime.CompilerServices;
 using BusinessLayer;
-
-
+using Amazon.Ecommerce;
 
 BasicMath basicMath = new BasicMath();
 int plus = basicMath.Add(3, 3);
@@ -25,7 +24,21 @@ lion.Attack();
 lion.Color();
 elephant.Color();
 
+Animal animal = new Animal();
+animal.Voice();
 
+
+Cat cat = new Cat();
+cat.Voice();
+cat.Dance();
+
+//Person person = new Person();         //This is an object of an abstract class which can't be created unless in the childClass
+//person.Sittt();
+
+Customer customer = new Customer();
+customer.Sittt();
+customer.HumanSound("Spanish Language");
+customer.Sound();
 
 
 //this.Attack();  << Error, only use "this." in a ChildClass
