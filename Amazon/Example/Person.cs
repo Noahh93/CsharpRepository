@@ -16,16 +16,35 @@ namespace Amazon.Example
         public string City { get; set; }
         public int ID { get; set; }
 
-        public void Sittt()
-        {
-            Console.WriteLine("Person Sit");
-        }
+        protected string _country;
+
         public Person()
         {
             Console.WriteLine("Person Construcor");
         }
+        public Person(string country)
+        {
+            _country = country;
+        }
+        public Person(int num, string name)
+        {
+
+        }
+                                    //Constructors above
+                                    // Methods below this line
+
+        public void Sittt()
+        {
+            Console.WriteLine("Person Sit");
+        }
+        
         public abstract void Sound();   //2. Abstract class never have implementation or body,
                                         //3. Can only be reached in override
         public abstract void HumanSound(string SoundName);
+        public abstract int HumanAge();  //You have to override
+        public virtual void HumanTeeth() //You can override
+        {
+            Console.WriteLine("Human has 32 teeth");
+        }
     }
 }

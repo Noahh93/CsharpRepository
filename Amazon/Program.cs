@@ -39,6 +39,17 @@ Customer customer = new Customer();
 customer.Sittt();
 customer.HumanSound("Spanish Language");
 customer.Sound();
+int Age = customer.HumanAge();
+Console.WriteLine($"Human age is: {Age}");
+customer.HumanTeeth(); //Customer has 25 teeth
+
+
+Amazon.Ecommerce.Employee employee = new Amazon.Ecommerce.Employee();
+employee.Sound();
+employee.HumanSound("Moshkeel");
+int age = employee.HumanAge();
+Console.WriteLine($"This persons age is: {age}");
+employee.HumanTeeth(); //32
 
 
 //this.Attack();  << Error, only use "this." in a ChildClass
