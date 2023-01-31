@@ -20,7 +20,7 @@ namespace Amazon.Example
 
         public Person()
         {
-            Console.WriteLine("Person Construcor");
+            Console.WriteLine("Person Constructor");
         }
         public Person(string country)
         {
@@ -30,14 +30,24 @@ namespace Amazon.Example
         {
 
         }
-                                    //Constructors above
-                                    // Methods below this line
+        public Person(string A, string B, string C, string D, string E)
+        {
 
+        }
+
+    //Constructors above
+    // Methods below this line
+
+    public void StandStill()
+        {
+            Console.WriteLine("StandStill from abstract class Person");
+        }
         public void Sittt()
         {
             Console.WriteLine("Person Sit");
         }
-        
+
+        public abstract void StandStill2();
         public abstract void Sound();   //2. Abstract class never have implementation or body,
                                         //3. Can only be reached in override
         public abstract void HumanSound(string SoundName);

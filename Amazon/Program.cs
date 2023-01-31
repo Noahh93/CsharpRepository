@@ -42,6 +42,8 @@ customer.Sound();
 int Age = customer.HumanAge();
 Console.WriteLine($"Human age is: {Age}");
 customer.HumanTeeth(); //Customer has 25 teeth
+customer.StandStill();
+customer.StandStill2();
 
 
 Amazon.Ecommerce.Employee employee = new Amazon.Ecommerce.Employee();
@@ -50,14 +52,14 @@ employee.HumanSound("Moshkeel");
 int age = employee.HumanAge();
 Console.WriteLine($"This persons age is: {age}");
 employee.HumanTeeth(); //32
-
+employee.StandStill2();
 
 //this.Attack();  << Error, only use "this." in a ChildClass
 
 
 
-string RaceName = lion.Race("Jungle");
-Console.WriteLine(RaceName);
+//string RaceName = lion.Race("Jungle");
+//Console.WriteLine(RaceName);
 Console.ReadKey();
 /*                                              INHERITANCE * INHERITANCE * INHERITANCE
 Cat cat = new Cat();

@@ -12,12 +12,16 @@ namespace Amazon.Ecommerce
 {
     internal class Customer : Person    
     {
-        
 
-        public Customer() : base (234, "Jonny")
+
+        public Customer() : base(234, "Jonny")
         {
-            Console.WriteLine("Customer Constructor");
+            Console.WriteLine("Customer Constructor, Jonny");
         }
+        //public Customer() : base ("A", "A", "A", "A", "A")
+        //{
+        //    Console.WriteLine("ABCDE");
+        //}
         public override void Sound()
         {
             Console.WriteLine("Sound");
@@ -34,17 +38,26 @@ namespace Amazon.Ecommerce
         {
             Console.WriteLine("Customer has 25 teeth");
         }
-
+        public override void StandStill2()
+        {
+            Console.WriteLine("This is the override of the abstract method from classPerson");
+        }
+        
     }
 
     internal class Employee : Person
     {
         public void GetEmployeeCompanyName() 
         {
-            Animal animal = new Animal();  //Can be reached without inheritance
+            Animal animal = new Animal();  //Can be reached without inheritance since it's not abstract
             animal.Voice();
             animal.Sleep();
             Console.WriteLine("Amazon");
+        }
+
+        public override void StandStill2()
+        {
+            Console.WriteLine("This is the override of the abstract method from classPerson");
         }
         public override void Sound()
         {
