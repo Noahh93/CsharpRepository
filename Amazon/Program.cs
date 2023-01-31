@@ -56,7 +56,13 @@ employee.StandStill2();
 
 //this.Attack();  << Error, only use "this." in a ChildClass
 
-
+Customer customer1 = new Customer(4,4);
+Customer customer2 = new Customer("Noah", "Amin", "Iraq");
+customer2.DisplayCustomerCountry();
+Customer customer3 = new Customer("John", "Smith", "NewZealand");
+customer3.DisplayCustomerCountry();
+Customer customer4 = new Customer(56);
+Customer customer5 = new Customer("Noah", 100);
 
 //string RaceName = lion.Race("Jungle");
 //Console.WriteLine(RaceName);

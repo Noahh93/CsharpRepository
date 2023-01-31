@@ -22,6 +22,10 @@ namespace Amazon.Example
         {
             Console.WriteLine("Person Constructor");
         }
+        public Person(int age)
+        {
+
+        }
         public Person(string country)
         {
             _country = country;
@@ -38,7 +42,7 @@ namespace Amazon.Example
     //Constructors above
     // Methods below this line
 
-    public void StandStill()
+        public void StandStill()
         {
             Console.WriteLine("StandStill from abstract class Person");
         }
