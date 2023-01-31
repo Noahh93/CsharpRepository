@@ -14,5 +14,9 @@ namespace Amazon.examples.Inheritance
         {
             Console.WriteLine("White");
         }
+        public void Dance()
+        {
+            Console.WriteLine("Cat dance");
+        }
     }
 }

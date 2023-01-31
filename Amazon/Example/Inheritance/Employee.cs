@@ -8,17 +8,3 @@ namespace Amazon.examples.Inheritance
         
     }
 }
-
-/*
- Animal  - Lion
-         - Dog
-
- Vehicle - Car
-         - Tractor
-         - Rocket
-
- Food    - Tikka Masala
-         - Pizza
-
-
-*/
