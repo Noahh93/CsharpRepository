@@ -18,7 +18,7 @@ namespace Amazon.Example
 
         protected string _country;
 
-        public Person()
+        public Person()         //Constructors dont have VOID
         {
             Console.WriteLine("Person Constructor");
         }
@@ -53,9 +53,9 @@ namespace Amazon.Example
 
         public abstract void StandStill2();
         public abstract void Sound();   //2. Abstract class never have implementation or body,
-                                        //3. Can only be reached in override
+                                        // Can only be reached in override
         public abstract void HumanSound(string SoundName);
-        public abstract int HumanAge();  //You have to override
+        public abstract int HumanAge();  //3.You have to override
         public virtual void HumanTeeth() //You can override
         {
             Console.WriteLine("Human has 32 teeth");
