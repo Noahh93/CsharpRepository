@@ -19,7 +19,7 @@ namespace Amazon.examples.Inheritance
             _age = age;
             _name = name;
         }
-        public Animal(int id, int age, string name, string country)
+        public Animal(int id, int age, string name, string country)  //THIS IS TOMORROWS ASSIGNMENT, fill out this info on Program.cs
         {
             _id = id;
             _age = age;
@@ -27,6 +27,10 @@ namespace Amazon.examples.Inheritance
             _country = country;
         }
 
+        public Animal(string name)
+        {
+            _name = name;
+        }
         public Animal()
         {
             Console.WriteLine("Parent ConstructorClass Animal");
@@ -60,19 +64,21 @@ namespace Amazon.examples.Inheritance
         {
             Console.WriteLine("Black");
         }
+
+                                                                        /*
+                                                                 Method Overriding:
+                                                                 Child class method has
+                                                                    Same name
+                                                                    Same parameter
+                                                                    Same return type string/int
+                                                                parentclass - virtual
+                                                                childclass - override (or "abstract" if it's an abstract class)
+                                                                 */
         public virtual string Race(string RaceName)         
         {
             string name = ($"ParentClass {RaceName}");
             return name;
         }
-        /*
-         Method Overriding:
-         Child class method has
-            Same name
-            Same parameter
-            Same return type string/int
-        parentclass - virtual
-        childclass - override
-         */
+
     }
 }

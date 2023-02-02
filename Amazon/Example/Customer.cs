@@ -14,14 +14,31 @@ namespace Amazon.Ecommerce
     {
 
 
-        public Customer() : base(234, "Jonny")
+        public Customer() : base(234, "Jonny")                          
         {
             Console.WriteLine("Customer Constructor, Jonny");
         }
-        //public Customer() : base ("A", "A", "A", "A", "A")
-        //{
-        //    Console.WriteLine("ABCDE");
-        //}
+        public Customer(int Age) : base(Age)
+        {
+            
+            Console.WriteLine($"This guy is {Age} years old BCDE");
+        }
+        public Customer(int B, int C) : base()           //Constructor overloading means that the constructors can have name but not same parameters datatype
+        {
+            
+        }
+        public Customer(string A, int B) : base(B,A)
+        {
+
+        }
+        public Customer(string A, string B, string Country) : base(Country)
+        {
+
+        }
+        public void DisplayCustomerCountry()
+        {
+            Console.WriteLine($"Customer country is {this._country}");
+        }
         public override void Sound()
         {
             Console.WriteLine("Sound");

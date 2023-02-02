@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Amazon.Example;
+using System;
 
 namespace Amazon.examples.Inheritance
 { 

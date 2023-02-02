@@ -5,7 +5,18 @@ namespace Amazon.examples.Inheritance
 
     public class Cat : Animal
     {
-        public Cat()
+        protected string _state;
+        public Cat(int id, int age, string name, string country, string state) : base(id, age, name, country) 
+        {
+            _state = state;
+        }
+
+        public Cat(string name) : base(name) 
+        {
+
+        }
+
+        public Cat() 
         {
             Console.WriteLine("ChildClass Constructor Cat");
             Console.WriteLine(this.Eyes);
@@ -18,5 +29,6 @@ namespace Amazon.examples.Inheritance
         {
             Console.WriteLine("Cat dance");
         }
+
     }
 }
