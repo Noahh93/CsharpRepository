@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Amazon.Example
 {
-    internal class Calculator
+    internal class Calculator  
     {
         public int Add(int N1,int N2)
         {
