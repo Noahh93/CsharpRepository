@@ -1,23 +1,72 @@
 ﻿
-using Amazon.Example;
 using Amazon.Example.Inheritance;
 using Amazon.examples.Inheritance;
-using System.Data.Common;
-using System.Runtime.CompilerServices;
-using BusinessLayer;
-using Amazon.Ecommerce;
-
-Kitten kitten = new Kitten(1234, 12, "Noah", "Nigeria", "NigeriaCapital");
 
 
+Vehicle vehicle = new Vehicle();
+vehicle.Wheels();
+vehicle.Windows(4);
+vehicle.Engine();
 
-kitten.Dance(); //Inherited from Cat - Kitten
-kitten.Jump();  //Inherited from Animal - Cat - Kitten
-kitten.KittenName("JULIA");
-kitten.DisplayDetail();
+int number1 = vehicle.Doors();
+Console.WriteLine(number1);
+string number2 = vehicle.Wipers(9);
+Console.WriteLine(number2);
 
+string VariableOne = vehicle.VehicleColor("Blue");
+Console.WriteLine(VariableOne);
+
+string VariableTwo = vehicle.VehicleName();
+Console.WriteLine(VariableTwo);
 
 Console.ReadKey();
+
+
+/* 
+ We Checked: 
+
+sealed
+interface
+constructors "base" keyword
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//FullTimeEmployee fullTimeEmployee = new FullTimeEmployee();
+//fullTimeEmployee.EmployeeName("Noah","Amin");
+
+
+//PartTimeEmployee partTimeEmployee = new PartTimeEmployee();
+//partTimeEmployee.EmployeeName("Salman","Khan");
+
+
+//ContractEmployee contractEmployee = new ContractEmployee();
+//contractEmployee.EmployeeName("Shahrukh", "Khan");
+
+
+
+
+
+
+
+
+
+
+
+
 
 //       ***    HIGH IMPORTANCE LEVEL      ***
 
