@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Amazon.Example.Inheritance
 {
-    internal class Vehicle : IVehicle, IVehicleDetail       //Multiple inheritance is only allowed through interfaces
+    internal class Vehicle : IVehicle       //Multiple inheritance is only allowed through interfaces
     {
         public string VehicleName()
         {
