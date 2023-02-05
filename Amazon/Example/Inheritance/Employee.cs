@@ -1,5 +1,6 @@
 ﻿using Amazon.Example;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Amazon.examples.Inheritance
 { 
@@ -29,6 +30,31 @@ namespace Amazon.examples.Inheritance
         public virtual void FullTimeEmployeeMethod()
         {
             Console.WriteLine("Parent Fulltime Employee Method");
+        }
+
+        private int _age;
+        private string _name;
+        public Employee(Employee employee)
+        {
+            this._age = employee._age;
+            this._name = employee._name;
+        }
+        public Employee(int age, string name)
+        {
+            _age = age;
+            _name = name;
+        }
+        public void DisplayEmployee()
+        {
+            Console.WriteLine($"Employee age = {_age} employee name = {_name}");
+        }
+        public Employee()
+        {
+
+        }
+        public void DisplayEmployeeAccount(Account account)
+        {
+            Console.WriteLine($"This account ID = {account.DisplayAccount()}");
         }
     }
 }
