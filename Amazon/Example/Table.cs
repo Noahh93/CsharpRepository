@@ -8,5 +8,6 @@ namespace Amazon.Example
 {
     internal class Table
     {
+
     }
 }
