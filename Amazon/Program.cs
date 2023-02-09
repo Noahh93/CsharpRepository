@@ -1,69 +1,60 @@
 ﻿
 using Amazon.Example;
 using Amazon.Example.Association;
+using Amazon.Example.Association.Agreggation;
 using Amazon.Example.Inheritance;
 using Amazon.Example.Interfaces;
 using Amazon.examples.Inheritance;
 using System.ComponentModel.DataAnnotations.Schema;
 
-//Inheritance = Relationship "IS a"              Association = Relationship "HAS a"
+//__________________________________________________________________________________________________________________________\\
+//CREATE AN INFERFACE OF "CITY". WITH 2 METHODS.
+//FIRST METHOD(CITY ID, CITYNAME)
+//SECOND METHOD = "DISPLAYCITY"
+//CREATE 1 CLASS "CITY" AND INHERITE "CITY" FROM INTERFACE
+//IN THE CITY CLASS INITIALIZE 2 FIELDS. CITYID AND CITYNAME
+//IN THE PROGRAM.CS DISPLAY CITY AND CALL "SADCITY" METHOD
+//DISPLAY CITY AGAIN
+//CREATE RELATIONSHIP BETWEEN COUNTRY AND CITY
 
+//country - city - student - ICity
+City city = new City("Mongolia","Dubai", 1234);
+city.SadCity();
+city.CityInfo(124, "LasVegas");
+city.DisplayCity();
+city.CountryCity();
+
+Country country = new Country("Spain", "Madrid");
+//country.DisplayCity();
+
+
+Student student = new Student("Noah", 23424);
+student.StudentInfo();
+student.StudentVisitor();
+
+
+//--------------------------------------------------------------------------------------------------------------------------\\
+
+
+
+
+
+
+
+
+//__________________________________________________________________________________________________________________________\\
+//Inheritance = Relationship "IS a"              Association = Relationship "HAS a"
 //Association is a relationship between 2 different classes that are established through their objects (many-many) (1-many) (many-1) all are association
-//
 //Association =  1.Composition 2.Aggregation  << 
 
-        Amazon.examples.Inheritance.Employee employee1 = new Amazon.examples.Inheritance.Employee(40, "Abdu");
-        employee1.DisplayEmployee();
-        Account accountemployee1 = new Account(54);
-        employee1.DisplayEmployeeAccount(accountemployee1);
-
-        Amazon.examples.Inheritance.Employee employee2 = new Amazon.examples.Inheritance.Employee(30, "Rakesh");
-        employee2.DisplayEmployee();
-        Account accountemployee2 = new Account(405);
-        employee2.DisplayEmployeeAccount(accountemployee2);
-
-        Amazon.examples.Inheritance.Employee employee3 = new Amazon.examples.Inheritance.Employee(employee1);
-        employee3.DisplayEmployee();
+//CREATE A RELATION BETWEEN STUDENT AND COUNTRY
+//Display studentName, studentCountry, and studentID
 
 
-Amazon.Example.Association.Human human = new Amazon.Example.Association.Human();
-human.HumanActivity();
-human.HeartActivity();
-human.HairActivity();
+//--------------------------------------------------------------------------------------------------------------------------\\
 
 
 
-
-string name;
-Brain brain2;
-
-//Create a HairClass and right a few methods like the examples above "human.hair" shows "hair is black"
-
-string[] Countries = new string[10];
-
-Countries[0] = "Afghanistan";
-Countries[1] = "Hindustan";
-Countries[5] = "Dubai";
-Countries[9] = "Sri Lanka";
-
-//Arrey = datastructure
-int[] num = new int[5];
-num[0] = 15;
-//num[1] = 20;
-//num[2] = 30;
-num[3] = 35;
-num[4] = 40;
-
-int length = num.Length;
-
-                                            //Next ASSIGNMENT. DISPLAY SUM OF ALL VALUES
-
-for (int i = num.Length -1; i >= 0; i--)
-{
-    Console.WriteLine(num[i]);
-}
-
-Console.ReadKey();
 
 
 
@@ -88,7 +79,7 @@ Console.ReadKey();
 //int example2 = employee.EmployeeSalary(55);
 //Console.WriteLine(example2);
 
-//Dynamic/Runtime = Method overriding or Overriding
+//Dynamic/Runtime = Method Overriding
 
 //Employee fullTimeEmployee = new FullTimeEmployee();         //BaseClass creating a refence in the InheritedClass
 //fullTimeEmployee.EmployeeName(" Mansour", "Mujahed ");
