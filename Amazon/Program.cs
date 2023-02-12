@@ -5,9 +5,55 @@ using Amazon.Example.Association.Agreggation;
 using Amazon.Example.Inheritance;
 using Amazon.Example.Interfaces;
 using Amazon.examples.Inheritance;
+using Amazon.GenericsExample;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+//__________________________________________________________________________________________________________________________\\
+//Create relation between Country and City and display several Cities. One to many. Country to Cities.
+//Create Interface of countryClass - Inherit City from interface
+
+
+GenericClass<string> genericClassSTRING = new GenericClass<string>();
+genericClassSTRING.data = "Noah";
+Console.WriteLine(genericClassSTRING.data);
+
+GenericClass<int> genericClassINT = new GenericClass<int>();
+genericClassINT.data = 45;
+Console.WriteLine(genericClassINT.data);
+
+Database<string> dataBase = new Database<string>();
+dataBase.GenMethod("45", "Jonny");
+dataBase.GenData = "Sweden";
+Console.WriteLine(dataBase.GenData);
+
+Database<double> databaseDouble = new Database<double>();
+databaseDouble.GenMethod(4.3, 3.4);
+
+databaseDouble.GenData = 4.5;
+Console.WriteLine(databaseDouble.GenData);
+
 
 //__________________________________________________________________________________________________________________________\\
+
+
+
+//__________________________________________________________________________________________________________________________\\
+
+
+//country - city - student - ICity
+//City city = new City("Egypt", 123);
+
+
+
+Country country = new Country();
+country.DisplayCities();
+
+
+
+
+//--------------------------------------------------------------------------------------------------------------------------\\
+
+
 //CREATE AN INFERFACE OF "CITY". WITH 2 METHODS.
 //FIRST METHOD(CITY ID, CITYNAME)
 //SECOND METHOD = "DISPLAYCITY"
@@ -16,30 +62,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 //IN THE PROGRAM.CS DISPLAY CITY AND CALL "SADCITY" METHOD
 //DISPLAY CITY AGAIN
 //CREATE RELATIONSHIP BETWEEN COUNTRY AND CITY
-
-//country - city - student - ICity
-City city = new City("Mongolia","Dubai", 1234);
-city.SadCity();
-city.CityInfo(124, "LasVegas");
-city.DisplayCity();
-city.CountryCity();
-
-Country country = new Country("Spain", "Madrid");
-//country.DisplayCity();
-
-
-Student student = new Student("Noah", 23424);
-student.StudentInfo();
-student.StudentVisitor();
-
-
-//--------------------------------------------------------------------------------------------------------------------------\\
-
-
-
-
-
-
 
 
 //__________________________________________________________________________________________________________________________\\
