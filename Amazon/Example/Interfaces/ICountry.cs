@@ -6,11 +6,8 @@ using System.Threading.Tasks;
 
 namespace Amazon.Example.Interfaces
 {
-    public interface ICity
+    internal interface ICountry
     {
-
-        public void CityInfo(int cityID, string cityName);
-
-        public void DisplayCity();
+        void DisplayCities();
     }
 }

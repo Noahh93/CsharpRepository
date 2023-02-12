@@ -10,35 +10,21 @@ namespace Amazon.Example
 {
 
 
-    public class City : ICity
+    public class City
     {
-
-        private Country _country;
         private string cityName;
         private int cityID;
 
-        public City(string Country, string _cityName, int _cityID)
+        public City(string _cityName, int _cityID)
         {
             cityName = _cityName; 
             cityID = _cityID;
-            _country = new Country("Italia", "Milan");
         }
-        public void CityInfo(int cityID, string cityName)
+        public void DisplayCity1()
         {
-            Console.WriteLine($"The city with this ID: {cityID} is called {cityName}");
+            Console.WriteLine($"{cityName} and {cityID}");
         }
-        public void DisplayCity()
-        {
-            Console.WriteLine($"{cityName} {cityID}");
-        }
-        public void SadCity()
-        {
 
-        }
-        public void CountryCity()
-        {
-            _country.CountryCity("Africa", "Tanzania");
-        }
 
     }
 }

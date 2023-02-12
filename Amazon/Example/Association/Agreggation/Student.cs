@@ -14,7 +14,7 @@ namespace Amazon.Example.Association.Agreggation
 
         public Student(string studentName, int studentID) 
         {
-            _country = new Country("Sweden", "Stockholm");
+            //_country = new Country("Sweden", "Stockholm");
             _studentName = studentName;
             _studentID = studentID;
         }
@@ -22,7 +22,7 @@ namespace Amazon.Example.Association.Agreggation
         public void StudentVisitor()
         {
 
-            _country.CountryStudent();
+            //_country.CountryStudent();
         }
         public void StudentInfo()
         {

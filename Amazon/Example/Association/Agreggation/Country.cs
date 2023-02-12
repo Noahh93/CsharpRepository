@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Amazon.Example.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -7,26 +8,26 @@ using System.Threading.Tasks;
 
 namespace Amazon.Example.Association.Agreggation
 {
-    internal class Country
+    internal class Country : ICountry
     {
-        private string _countryName;
-        string _cityName;
 
-        public Country(string countryName, string cityName)
+        City[] _cities;
+
+        public Country()
         {
-            _countryName = countryName;
-            _cityName = cityName;
+            _cities = new City[3];
+            _cities[0] = new City("New York", 123);
+            _cities[1] = new City("Paris", 123);
+            _cities[2] = new City("Amsterdam", 123);
         }
-        public void CountryStudent()
+        public void DisplayCities()
         {
-            Console.WriteLine(_countryName);
-        }
-        public void CountryCity(string countryName, string cityName) 
-        { 
-            Console.WriteLine($"This country '{_countryName}' has a city by the name of {_cityName}"); 
-        }
+            _cities[0].DisplayCity1();
+            _cities[1].DisplayCity1();
+            _cities[2].DisplayCity1();
 
-
+        }
+        
     }
 
 }
