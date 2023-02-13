@@ -1,36 +1,84 @@
-﻿
-using Amazon.Example;
-using Amazon.Example.Association;
-using Amazon.Example.Association.Agreggation;
-using Amazon.Example.Inheritance;
-using Amazon.Example.Interfaces;
-using Amazon.examples.Inheritance;
-using Amazon.GenericsExample;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using Amazon.Example.AbstractClasses;
+
+Factory factory = new Factory();
+Car car = factory.GetCarVehicle();
+
+
+string nameCar = car.VehicleInfo();
+Console.WriteLine(nameCar);
+
+
+string passName = factory.GetVehicle("rickshaw");     //I am a rickshaw
+Console.WriteLine(passName);
+
+
+Vehicle vehicleObject = factory.GetVehicleObject("rickshaw");
+string vehicleInfo = vehicleObject.VehicleInfo();
+Console.WriteLine(vehicleInfo);
+
+Vehicle rickshawObject = new Rickshaw();
+string name = rickshawObject.VehicleInfo();
+Console.WriteLine(name);
+
+Console.ReadKey();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//int number1 = 8;
+//int result = number1 % 2;
+//Console.WriteLine(result);
+
+//ChildMyMeth childMyMeth = new ChildMyMeth();
+
+//bool result = childMyMeth.IsNumberEven(8);
+
+//if (result == true)
+//{
+//    Console.WriteLine($"This number is even");
+//}
+//else
+//{
+//    Console.WriteLine($"This number is not even");
+//}
+
+
+
+
+
 //__________________________________________________________________________________________________________________________\\
 //Create relation between Country and City and display several Cities. One to many. Country to Cities.
 //Create Interface of countryClass - Inherit City from interface
 
 
-GenericClass<string> genericClassSTRING = new GenericClass<string>();
-genericClassSTRING.data = "Noah";
-Console.WriteLine(genericClassSTRING.data);
+//GenericClass<string> genericClassSTRING = new GenericClass<string>();
+//genericClassSTRING.data = "Noah";
+//Console.WriteLine(genericClassSTRING.data);
 
-GenericClass<int> genericClassINT = new GenericClass<int>();
-genericClassINT.data = 45;
-Console.WriteLine(genericClassINT.data);
+//GenericClass<int> genericClassINT = new GenericClass<int>();
+//genericClassINT.data = 45;
+//Console.WriteLine(genericClassINT.data);
 
-Database<string> dataBase = new Database<string>();
-dataBase.GenMethod("45", "Jonny");
-dataBase.GenData = "Sweden";
-Console.WriteLine(dataBase.GenData);
+//Database<string> dataBase = new Database<string>();
+//dataBase.GenMethod("45", "Jonny");
+//dataBase.GenData = "Sweden";
+//Console.WriteLine(dataBase.GenData);
 
-Database<double> databaseDouble = new Database<double>();
-databaseDouble.GenMethod(4.3, 3.4);
+//Database<double> databaseDouble = new Database<double>();
+//databaseDouble.GenMethod(4.3, 3.4);
 
-databaseDouble.GenData = 4.5;
-Console.WriteLine(databaseDouble.GenData);
+//databaseDouble.GenData = 4.5;
+//Console.WriteLine(databaseDouble.GenData);
 
 
 //__________________________________________________________________________________________________________________________\\
@@ -45,8 +93,8 @@ Console.WriteLine(databaseDouble.GenData);
 
 
 
-Country country = new Country();
-country.DisplayCities();
+//Country country = new Country();
+//country.DisplayCities();
 
 
 
