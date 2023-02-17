@@ -1,26 +1,81 @@
-﻿using Amazon.Example.AbstractClasses;
-
-Factory factory = new Factory();
-Car car = factory.GetCarVehicle();
-
-
-string nameCar = car.VehicleInfo();
-Console.WriteLine(nameCar);
+﻿using Amazon.Example;
+using Amazon.Example.AbstractClasses;
+using Amazon.Example.Association;
+using Amazon.Example.Association.Agreggation;
 
 
-string passName = factory.GetVehicle("rickshaw");     //I am a rickshaw
-Console.WriteLine(passName);
+
+//                                                       assignment
+//            >>>           >>>>       Create an abstract class with multilevel inheritance      <<<<<          <<<
 
 
-Vehicle vehicleObject = factory.GetVehicleObject("rickshaw");
-string vehicleInfo = vehicleObject.VehicleInfo();
-Console.WriteLine(vehicleInfo);
 
-Vehicle rickshawObject = new Rickshaw();
-string name = rickshawObject.VehicleInfo();
-Console.WriteLine(name);
+//Recursive recursive = new Recursive();
+//recursive.DisplayArray(arr, arr.Length);
+
+Recursive recursive = new Recursive();
+recursive.SumofRange(10);
 
 Console.ReadKey();
+//Console.Write("Amount in the array: ");
+//int length = Convert.ToInt32(Console.ReadLine());
+
+//int[] Array = new int[length];
+
+//for (int i = 0; i < length; i++)
+//{
+//    Console.Write("Pick your number: ");
+//    Array[i] = Convert.ToInt32(Console.ReadLine());
+//}
+
+//recursive.DisplayArray(Array);
+
+/*
+  
+Create a aggregation (weak association) relationship between the mentioned below
+House - windows - doors
+Draw a diagram on paint
+*/
+
+
+//Door door = new Door();
+//Window window = new Window(door);
+//House house = new House(window);
+
+
+
+
+/*
+//__________________________________________________________________________________________________________________________\\
+MultiLevel - Single Inheritance - Hierarchal
+Hierarchal = 1 parentClass and many ChildClasses
+MultiLevel = GranParentClass > ParentClass > ChildClass > GrandChildClass
+*/
+
+//Mother mother = new Mother(" Mother");
+//Daughter daughter = new Daughter(" Daughter");
+//GrandDaughter gDaughter = new GrandDaughter(" Grand Daughter");
+
+
+//gDaughter.Greetings();
+//daughter.Greetings();
+//mother.Greetings();
+
+
+
+
+
+
+
+//Samsung samsung = new Samsung(1, "Samsung Galaxy A12");
+//string displaySamsung = samsung.GetMobileInfo();
+//Console.WriteLine(displaySamsung);
+
+
+
+//Kitten kitten = new Kitten();
+//string kittenName = kitten.GrandSon("Rambo");
+//Console.WriteLine(kittenName);
 
 
 
@@ -32,9 +87,32 @@ Console.ReadKey();
 
 
 
+//__________________________________________________________________________________________________________________________\\
+
+//Factory factory = new Factory();
+//Car car = factory.GetCarVehicle();
+
+
+//string nameCar = car.VehicleInfo();
+//Console.WriteLine(nameCar);
+
+
+//string passName = factory.GetVehicle("rickshaw");     //I am a rickshaw
+//Console.WriteLine(passName);
+
+
+//Vehicle vehicleObject = factory.GetVehicleObject("rickshaw");
+//string vehicleInfo = vehicleObject.VehicleInfo();
+//Console.WriteLine(vehicleInfo);
+
+//Vehicle rickshawObject = new Rickshaw();
+//string name = rickshawObject.VehicleInfo();
+//Console.WriteLine(name);
 
 
 
+
+//__________________________________________________________________________________________________________________________\\
 //int number1 = 8;
 //int result = number1 % 2;
 //Console.WriteLine(result);
