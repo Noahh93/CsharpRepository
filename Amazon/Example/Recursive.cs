@@ -28,13 +28,16 @@ namespace Amazon.Example
         //sum 1 +2 +3 + 4+ until range (10)
         public int SumofRange(int range)
         {
-            while (range <= 10 && range >= 0)
+            int sum = 0;
+            if (range == 1)
             {
-                return range--;
+                return 1;
             }
-
-            Console.WriteLine(SumofRange(range));
-            return range;
+            else
+            {
+                sum = range + SumofRange(range - 1);
+            }
+            return sum;
         }
 
 
@@ -60,10 +63,7 @@ namespace Amazon.Example
                 {
                     break;
                 }
-
-
             }
-
             int sum2 = 0;
 
             while (Array.Length > 0 )
@@ -110,12 +110,6 @@ namespace Amazon.Example
 
 
         /*
-
-
-
-
-
-
             public void DisplayArray(int[] arr, int length)
         {
             if (length < 0)
@@ -125,7 +119,6 @@ namespace Amazon.Example
             Console.WriteLine(arr[length]);
             length = length - 1;
             DisplayArray(arr, length);
-
         }
         */
     }

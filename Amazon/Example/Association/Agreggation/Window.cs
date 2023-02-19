@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Amazon.Example.Association.Agreggation
 {
-    internal class Window
+    internal class Window : Door
     {
         Door _door;
         
