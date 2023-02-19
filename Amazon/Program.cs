@@ -6,7 +6,8 @@ using Amazon.Example.Association.Agreggation;
 
 
 //                                                       assignment
-//            >>>           >>>>       Create an abstract class with multilevel inheritance      <<<<<          <<<
+// Data in order and in reverse order (NODES) through while loop.
+// 1.2.3.4.5 and then 5.4.3.2.1
 
 
 
@@ -14,7 +15,52 @@ using Amazon.Example.Association.Agreggation;
 //recursive.DisplayArray(arr, arr.Length);
 
 Recursive recursive = new Recursive();
-recursive.SumofRange(10);
+int sum = recursive.SumofRange(10);
+Console.WriteLine(sum);
+
+
+
+Node node1 = new Node();
+node1.data = 55;
+node1.next = null;
+
+Node node2 = new Node();
+node2.data = 65;
+node2.next = null;
+    node1.next = node2;
+
+Node node3 = new Node();
+node3.data = 75;
+node3.next = null;
+    node2.next = node3;
+
+Node node4 = new Node();
+node4.data = 85;
+node4.next = null;
+    node3.next = node4;
+
+Node node5 = new Node();
+node5.data = 95;
+node5.next = null;
+    node4.next = node5;
+
+Node Header = node1;
+
+while (Header != null)
+{
+    Console.WriteLine(Header.data);
+    Header = Header.next;
+
+}
+
+while (Header == null)
+{
+    Console.WriteLine(Header.data);
+    Console.WriteLine(Header);
+}
+
+
+
 
 Console.ReadKey();
 //Console.Write("Amount in the array: ");
