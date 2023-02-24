@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\UserRegistration\UserRegistration.csproj" />
   </ItemGroup>
 
 </Project>
