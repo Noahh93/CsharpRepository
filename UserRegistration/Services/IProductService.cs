@@ -10,5 +10,7 @@ namespace UserRegistration.Services
     {
         void TotalProductsAvailable();
         void UpdateProductByID(int productID, string productName, string productDescription, int productQuantity);
+        int SubractQuantityByProductID(int productID);
     }
+    
 }

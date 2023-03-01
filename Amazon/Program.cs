@@ -2,49 +2,73 @@
 //using Amazon.Example.AbstractClasses;
 //using Amazon.Example.Association;
 //using Amazon.Example.Association.Agreggation;
-using UserRegistration;
-using UserRegistration.Services;
+//using UserRegistration;
+//using UserRegistration.Services;
 
 
-Service service = new Service();
-service.Register(1, "Noah", "noah@hotmail.com", "123", "Sweden");
-service.Register(2, "Johnny", "johnny@hotmail.com", "222", "Sweden");
-service.Register(3, "BigBoy", "Big32@hotmail.com", "212", "USA");
-service.Register(4, "Rambo", "Rambo_32@hotmail.com", "222", "Kazakhstan");
-service.Register(5, "LittleBoy", "Small32@hotmail.com", "2162", "Sweden");
-//service.DisplayUsers();
-//service.ChangePassword("Rambo_32@hotmail.com", "Rambo12X");
-//service.ChangePassword("Small32@hotmail.com", "LittleBoy");
-//Console.WriteLine("***********************");
-//service.DisplayUsers();
-//service.DisplayTotalUsersByCountry("Sweden");
-//service.Login("noah@hotmail.com", "123");
-ProductService productService = new ProductService();
-productService.RegisterProduct(1, "Head Phones", "Portable with good bass in red color", 45.99, DateTime.Now, 15);
-productService.RegisterProduct(2, "Gloves", "Warm and fluffy made of wool", 13.49, DateTime.Now, 20);
-productService.RegisterProduct(3, "Jeans", "Italian made from leather, water resistant", 119.99, DateTime.Now, 4);
-productService.RegisterProduct(4, "Branded Jacket", "Very cool jacket, social status", 129.99, DateTime.Now, 16);
-Console.WriteLine("*********************************  Before update  ************************************");
 
-productService.DisplayProduct();
-productService.UpdateProductByID(3, "Black Jeans", null, 55);
-productService.UpdateProductByID(2, null, null, 100);
-productService.UpdateProductByID(4, null, "Not cool, torn apart jacket", 0);
-productService.UpdateProductByID(0, null, null, 0);
-Console.WriteLine("*********************************  After update  ************************************");
-productService.DisplayProduct();
+
+
+
+
+
+
+
+
+
+
+
+
+//Service service = new Service();
+//service.Register(1, "Noah", "noah@hotmail.com", "123", "Sweden");
+//service.Register(2, "Johnny", "johnny@hotmail.com", "222", "Sweden");
+//service.Register(3, "BigBoy", "Big32@hotmail.com", "212", "USA");
+//service.Register(4, "Rambo", "Rambo_32@hotmail.com", "222", "Kazakhstan");
+//service.Register(5, "LittleBoy", "Small32@hotmail.com", "2162", "Sweden");
+////service.DisplayUsers();
+////service.ChangePassword("Rambo_32@hotmail.com", "Rambo12X");
+////service.ChangePassword("Small32@hotmail.com", "LittleBoy");
+////Console.WriteLine("***********************");
+////service.DisplayUsers();
+////service.DisplayTotalUsersByCountry("Sweden");
+////service.Login("noah@hotmail.com", "123");
+//ProductService productService = new ProductService();
+//productService.RegisterProduct(1, "Head Phones", "Portable with good bass in red color", 45.99, DateTime.Now, 15);
+//productService.RegisterProduct(2, "Gloves", "Warm and fluffy made of wool", 13.49, DateTime.Now, 20);
+//productService.RegisterProduct(3, "Jeans", "Italian made from leather, water resistant", 119.99, DateTime.Now, 4);
+//productService.RegisterProduct(4, "Branded Jacket", "Very cool jacket, social status", 129.99, DateTime.Now, 16);
+////Console.WriteLine("*********************************  Before update  ************************************");
+
+////productService.DisplayProduct();
+////productService.UpdateProductByID(3, "Black Jeans", null, 55);
+////productService.UpdateProductByID(2, null, null, 100);
+////productService.UpdateProductByID(4, null, "Not cool, torn apart jacket", 0);
+////productService.UpdateProductByID(0, null, null, 0);
+//Console.WriteLine("*****************  Display Product before purchase  *****************");
 //productService.DisplayProduct();
-//productService.TotalProductsAvailable();
-//service.PurchaseProduct("Jeans", 4);
-//service.PurchaseProduct("Gloves", 4);
-////service.DisplayUserOrder(4);
-//service.PurchaseProduct("Head Phones", 1);
-////service.DisplayUserOrder(1);
-//service.PurchaseProduct("Branded Jacket", 5);
-//service.PurchaseProduct("Gloves", 5);
-//service.PurchaseProduct("Branded Jacket", 4);
-//service.DisplayAllUserOrders();
-
+////productService.DisplayProduct();
+////productService.TotalProductsAvailable();
+////service.PurchaseProduct("Jeans", 4);
+////service.PurchaseProduct("Gloves", 4);
+////////service.DisplayUserOrder(4);
+////service.PurchaseProduct("Head Phones", 1);
+////////service.DisplayUserOrder(1);
+////service.PurchaseProduct("Branded Jacket", 5);
+////service.PurchaseProduct("Gloves", 5);
+////service.PurchaseProduct("Branded Jacket", 4);
+//productService.SubractQuantityByProductID(3);
+////service.DisplayAllUserOrders();
+//productService.SubractQuantityByProductID(3);
+//productService.SubractQuantityByProductID(3);
+//productService.SubractQuantityByProductID(3);
+//productService.SubractQuantityByProductID(3);
+//productService.SubractQuantityByProductID(4);
+//productService.SubractQuantityByProductID(4);
+//productService.SubractQuantityByProductID(4);
+//productService.SubractQuantityByProductID(4);
+//Console.WriteLine("*****************  Display Product after purchase  *****************");
+//productService.DisplayProduct();
+Console.ReadKey();
 //productService.DisplayHighestPriceProduct();
 
 //Node node1 = new Node();

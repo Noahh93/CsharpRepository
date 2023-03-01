@@ -34,7 +34,7 @@ namespace UserRegistration.Services
                 {
                     break;
                 }
-                Console.WriteLine($"{_products[i].GetProductID()}, {_products[i].GetName()}, {_products[i].GetDescription()},{_products[i].GetPrice()}, {_products[i].GetCreatedDateTime()}, {_products[i].GetQuantity()}");
+                Console.WriteLine($"\n{_products[i].GetProductID()}, \nName: {_products[i].GetName()}, \n{_products[i].GetDescription()},\nPrice: {_products[i].GetPrice()}, \n{_products[i].GetCreatedDateTime()}, \nIn stock: {_products[i].GetQuantity()}");
                 
             }
         }
@@ -93,6 +93,28 @@ namespace UserRegistration.Services
                     }
                 }
             }
+        }
+        public int SubractQuantityByProductID(int productID)
+        {
+            int latestQuantity = 0;
+            for (int i = 0; i < _index; i++)
+            {
+
+                if (productID == _products[i].GetProductID())
+                {
+                    int quantity = _products[i].GetQuantity();
+                    if (quantity > 0)
+                    {
+                        latestQuantity = quantity - 1;
+                        _products[i].SetQuantity(latestQuantity);
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+            }
+            return latestQuantity;
         }
     }
 }
