@@ -1,6 +1,5 @@
 # CsharpRepository
-Lessons and learning?
 
-HEY!!
-
-ADDED directly in the GitHub editor
+Welcome to Noahs github Library
+In here you can find my previously finished work and exercises.
+It includes work in the C# language
